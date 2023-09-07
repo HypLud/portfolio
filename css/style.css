@@ -1,0 +1,495 @@
+/*______________
+
+CSS Portfolio 
+style.css
+________________*/
+
+/* Les polices */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: orange #111;
+}
+
+body {
+    background-color: #111;
+    color: #6D6C6C;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+    padding: 40px;
+}
+
+h1 span.bleu {
+    color: #1786f4;
+}
+
+h1 span.orange {
+    color: orange;
+}
+
+h2 span.bleu {
+    color: #1786f4;
+}
+
+h2 span.orange {
+    color: orange;
+}
+
+hr {
+    border: inset 1px #222;
+}
+
+/* Conteneur englobe toute la page */
+#conteneur {
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Début du Header */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #111;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px 40px 0 0;
+}
+
+#infos {
+    background-color: #111;
+    min-width: 245px;
+    min-height: 245px;
+    max-width: 245px;
+    max-height: 245px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0);
+    border-radius: 0 50px 0 50px;
+    border: solid 2px #111;
+}
+
+#infos img {
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+    border: solid 5px #000;
+}
+
+#infos h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+    font-size: 22px;
+    border-bottom: solid 1px #222;
+}
+
+#apropos {
+    position: relative;
+    max-width: 700px;
+    padding: 10px;
+}
+
+#apropos p {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#apropos p span.bleu,
+#formations_experiences span.bleu {
+    color: #1786F4;
+}
+
+#apropos p span.orange,
+#formations_experiences span.orange {
+    color: orange;
+}
+
+#cv {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#cv a {
+    display: inline-block;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: 1s;
+    background-color: #1786F4;
+    color: #fff;
+    border-radius: 10px;
+
+}
+
+#cv a:hover {
+    transition: 1s;
+    background-color: orange;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Fin du Header */
+
+
+/* Début des sections, formations, expériences et compétences */
+#formations_experiences ul {
+    margin: 0;
+    padding: 0 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#formations_experiences li {
+    padding: 5px;
+}
+
+#formations_experiences,
+#competences {
+    background-color: #111;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#formations_experiences h2,
+#competences h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: solid 1px #222;
+}
+
+#formations_experiences #conteneur_article,
+#competences #conteneur_article {
+    display: flex;
+}
+
+#formations_experiences div article,
+#competences div article {
+    width: 800px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+#formations_experiences div article h3.bleu,
+#competences div article h3.bleu {
+    width: 300px;
+    margin: 0 auto 20px auto;
+    padding: 8px 0;
+    background-color: #005DB9;
+    color: #fff;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+}
+
+#formations_experiences div article h3.orange,
+#competences div article h3.orange {
+    width: 300px;
+    margin: 0 auto 20px auto;
+    padding: 8px 0;
+    background-color: orange;
+    color: #000;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+}
+
+.conteneur_icones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.conteneur_icones div {
+    background-color: #181818;
+    width: 80px;
+    height: 140px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    transition: 1s;
+}
+
+.conteneur_icones div img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.conteneur_icones div:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.conteneur_icones div span.bleu {
+    color: #1786f4;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.conteneur_icones div span.orange {
+    color: orange;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+/* Début des sections, formations, expériences et compétences */
+
+
+/* Début de la section réalisation */
+#realisations {
+    background-color: #111;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#realisations h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: solid 1px #222;
+}
+
+#galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#galerie div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#galerie div div {
+    width: 300px;
+    height: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#galerie span.bleu {
+    color: #1786F4;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+#galerie span.orange {
+    color: orange;
+    text-transform: uppercase;
+}
+
+#galerie a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#galerie img {
+    margin-bottom: 20px;
+    border: solid 5px #111;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#galerie img:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    transition: 1s;
+}
+
+/* Fin de la section réalisation */
+
+/* Début du Footer */
+footer {
+    background-color: #111;
+    margin-bottom: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border-radius: 40px;
+}
+
+footer h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: solid 1px #222;
+}
+
+form {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+::placeholder:focus {
+    color: #000;
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+/* Partage la même police */
+input,
+textarea {
+    font-family: 'poppins', cursive;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #181818;
+    border-radius: 5px;
+    color: #fff;
+    border: solid 1px #000;
+    outline: none;
+    transition: 1s;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    min-height: 210px;
+    margin: 10px auto 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #181818;
+    border-radius: 5px;
+    color: #fff;
+    padding-left: 10px;
+    border: solid 1px #000;
+    outline: none;
+    transition: 1s;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    transition: 1s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    transition: 1s;
+    color: orange;
+    transform: scale(1.1);
+}
+
+input[type="submit"] {
+    background-color: #1786F4;
+    color: #fff;
+    border-radius: 5px;
+    border: solid 1px #000;
+    outline: none;
+    width: 280px;
+    height: 57px;
+    cursor: pointer;
+    text-align: center;
+    transition: 1s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    align-self: flex-end;
+}
+
+input[type="submit"]:hover {
+    background-color: orange;
+    color: #000;
+    transition: 1s;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 960px) {
+    #conteneur {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    #infos {
+        position: relative;
+        top: 10px;
+    }
+
+    #cv {
+        position: static;
+        text-align: center;
+    }
+
+    #formations_experiences div article,
+    #competences div article {
+        width: 100%;
+    }
+
+    #conteneur_article {
+        flex-direction: column;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Fin du Footer */
